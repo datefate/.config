@@ -1,50 +1,85 @@
-# 个人使用配置保存用
+# My configs
 
-`exec.sh` &`my-terminal-config.sh` 在使用的服务器上用, 基于我以前ubuntu来的, 升级出错后，发现自己原意折腾意愿变少了，以后再整理吧
+I throw my ubuntu configs and scripts here.
 
-## 相关位置
+Most of the scripts were turned into fish's functions。
 
-### 环境配置文件
+I have tried to categorize the files in different environments. But it's not easy.
 
-**Note**：使用中间件时，注意创建的用户的环境变量，为了免去麻烦，最本的是在启动配置文件中设置环境变量
+There are two group commands(script): one is static and can be used directly on all systems, while the other depends on specific environment information (like IP addresses).
+For the second, I put it in ./Kits, change it and save it to functions or alias.
 
- /etc/profile : 针对所有用户，第一个被执行的配置文件。就是上面的形式。 
+## Changes
+* Changed terminal shell from `zsh` to `fish`.
 
- /etc /environment : 在登录时操作系统使用的第二个文件, 系统在读取你自己的profile前,设置环境文件的环境变量。 不需要使用export，直接在path的变量中加入你的地址就行了，分隔符是：。
+## My choices
 
- ~/.profile :  在登录时用到的第三个文件 是.profile文件,针对一个用户,当用户登录时,该文件仅仅执行一次!默认情况下,他设置一些环境变量,执行用户的.bashrc文件。
+### gtk-theme
 
-/etc/bash.bashrc : 为每一个运行bash shell的用户执行此文件.当bash shell被打开时,该文件被读取. 
+I use **[WhiteSur-gtk-theme](https://github.com/vinceliuice/WhiteSur-gtk-theme)** , **[WhiteSur Icon Theme](https://github.com/vinceliuice/WhiteSur-gtk-theme?tab=readme-ov-file#whitesur-icon-theme)** and **[hatsune-miku-windows-linux-cursors](https://github.com/supermariofps/hatsune-miku-windows-linux-cursors)**. 
 
-~/bash.bashrc : 该文件包含专用于你的bash shell的bash信息,当登录时以及每次打开新的shell时,该该文件被读取。
+#### Must-have Extensions:
 
-### 头文件：
+Pano
 
-对于c语言：/usr/include/
+Tiling Assistant
 
-特定版本的linux：/usr/include/linux/    和 /usr/include/sys/
+Dash to Dock
 
-标准系统库文件：/usr/lib/
+Hide Top Bar
 
-## Ubuntu Gnome相关
+Vitals( mabye )
 
-MacOs比较好的主题，脚本直接完成安装，已star.
 
-```
-git clone https://github.com/vinceliuice/WhiteSur-gtk-theme.git
-cd WhiteSur-gtk-theme
-./install.sh -t all  -N glassy -s 220
-sudo ./tweaks.sh -g
-```
+### using fish
 
-#### Gnome的主题的位置
+install fish and [Oh-my-fish](https://github.com/oh-my-fish/oh-my-fish)
 
-```
-/usr/share/themes
-```
+**IMPORTANT PLUGINS**
 
-#### Gnome的图标的位置
+~~~fish
+omf install z
+omf install https://github.com/jhillyerd/plugin-git
+~~~
 
-```
-/usr/share/icons
-```
+### ranger
+**required:**
+
+execute `pip install ueberzug`
+
+## Commonly used software and its alternatives ( ALL PLATFORM )
+
+Ubuntu users can refer to the programs listed in the apt*.txt files located in the install directory.
+
+The software's official site will tell u how to install it.  If there's no suitable format of the app that you like, I recommend you try the `AppImage` . Mostly you will need to create a desktop file for the APPIAMGE.
+
+If you wanna running a specific  Windows application like `PhotoShop ` , try [wine](https://www.winehq.org/). But seriously?
+
+| Common use in windows      | APPS                                               |      |
+| -------------------------- | -------------------------------------------------- | ---- |
+| Microsoft Office           | [LibreOffice](https://www.libreoffice.org/) , WPS  |      |
+| Mail                       | Mozilla Thunderbird   (凡是网易系的公司邮箱都支持) |      |
+| Navicat                    | DBeaver                                            |      |
+| Music                      | Spotify                                            |      |
+| Meeting                    | Zoom                                               |      |
+| Reader (PDF, EPUB ,MOBI  ) | [FBReader](https://fbreader.org/en)                |      |
+| Snipaste                   | [Flameshot](https://flameshot.org/)                |      |
+| Postman                    | Thunder clint （Vscode Plugin ）                   |      |
+| Video Recorder             | OBS                                                |      |
+| PotPlayer                  | VLC                                                |      |
+| Vscode                     | [lunarvim](https://www.lunarvim.org/)              |      |
+
+[Screenkey](https://www.thregr.org/wavexx/software/screenkey/) ：Screencast your keys.
+
+`NeoVim` If you are willing to invest time in learning and using Vim.
+
+### CN only  （Chromium : 你好！）
+
+ **飞书**、**腾讯会议**都有Linux端，网易云原来支持后面被移除了(建议`vscode` 插件替代)
+
+**微信** 仅支持国产系统麒麟和统信UOS, Ubuntu勉强可用
+
+**[QQ](https://im.qq.com/linuxqq/index.shtml)** 各平台可用 （更新后遗留旧版本文件，需要手动清理垃圾玩意）,小毛病不少
+
+### Server
+[cockpit](https://cockpit-project.org/)
