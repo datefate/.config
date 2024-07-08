@@ -1,10 +1,8 @@
 # My configs
 
-I throw my ubuntu configs and scripts here.
+I store my Ubuntu configurations and scripts here. Most of the scripts have been converted into Fish shell functions.
 
-Most of the scripts were turned into fish's functions。
-
-I have tried to categorize the files in different environments. But it's not easy.
+I have attempted to categorize the files by different environments, but it's not an easy task.
 
 There are two group commands(script): one is static and can be used directly on all systems, while the other depends on specific environment information (like IP addresses).
 For the second, I put it in ./Kits, change it and save it to functions or alias.
