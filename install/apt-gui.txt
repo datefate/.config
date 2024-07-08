@@ -1,0 +1,8 @@
+typora
+flameshot
+goldendict
+vlc
+tlp
+tlp-rdw
+qbittorrent
+zeal

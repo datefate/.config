@@ -1,0 +1,10 @@
+ranger
+git
+zip
+trash-cli
+tree
+htop
+openjdk-21-jdk
+python3-pip
+#zsh
+fish
