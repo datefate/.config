@@ -1,4 +1,4 @@
-function upload_ISCP
+function upload_ISCP -a path
     if test -f "$path"
         scp -i "$pubkey" "$path" "$serUserName@$serIp:/home/$serUserName/Downloads"
     else if test -d "$path"
