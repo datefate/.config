@@ -60,7 +60,7 @@ If you wanna running a specific  Windows application like `PhotoShop ` , try [wi
 | Navicat                    | DBeaver                                            |      |
 | Music                      | Spotify                                            |      |
 | Meeting                    | Zoom                                               |      |
-| Reader (PDF, EPUB ,MOBI  ) | [FBReader](https://fbreader.org/en)                |      |
+| Reader (PDF, EPUB ,MOBI  ) | [FBReader](https://fbreader.org/en), Calibre(The final one stop soulution of ebook))               |      |
 | Snipaste                   | [Flameshot](https://flameshot.org/)                |      |
 | Postman                    | Thunder clint （Vscode Plugin ）                   |      |
 | Video Recorder             | OBS                                                |      |
