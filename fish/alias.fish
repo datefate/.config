@@ -11,7 +11,7 @@ alias of='nautilus .'
 alias 1='cd ~'
 alias 2='cd ~/Downloads'
 alias 3='cd ~/Documents'
-# `sudo apt-get install ranger` first
+# Install ranger first
 alias re='ranger'
 
 # count all files in the dir , not including dir
